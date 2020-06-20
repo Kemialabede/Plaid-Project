@@ -1,0 +1,50 @@
+.button{
+    justify-content: space-between;
+    margin-bottom: 0;
+    min-width: 210px;
+    height: 48px;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: white;
+    font-family: 'Signika', sans-serif;
+    font-size: 18px;
+    display: flex;
+    padding-top: 15px;
+}
+.btn-arrow{
+    transform: rotate(-90deg);
+    margin-right: 7px;
+}
+.nav{
+    margin-top: 15%;
+}
+.nav:hover{
+    border: 1px solid red;
+}
+.nav:hover::after{
+    border: 1px solid green;
+}
+.section-button{
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    font-family: 'Signika', sans-serif;
+}
+.section-button-two{
+    background-color: #111111;
+    color: white;
+    border: 1px solid white;
+    margin-top: 30px;
+    min-width:160px;
+}
+.footer-button{
+    min-width: 300px;
+}
+.footer-button-two{
+    min-width: 300px;
+    background-color: #111111;
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+}
