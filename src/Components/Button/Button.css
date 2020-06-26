@@ -1,23 +1,23 @@
 .button{
     justify-content: space-between;
     margin-bottom: 0;
-    min-width: 210px;
+    width: 180px;
     height: 48px;
-    text-align: left;
     border: 1px solid black;
     border-radius: 3px;
     background: white;
     font-family: 'Signika', sans-serif;
     font-size: 18px;
-    display: flex;
-    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
 }
+
 .btn-arrow{
-    transform: rotate(-90deg);
-    margin-right: 7px;
+    margin-right: -8px;
 }
 .nav{
-    margin-top: 15%;
+    margin-left: 15px;
 }
 .nav:hover{
     border: 1px solid red;
@@ -28,8 +28,9 @@
 .section-button{
     background-color: black;
     color: white;
-    margin-left: 10%;
     font-family: 'Signika', sans-serif;
+    width: 200px;
+    
 }
 .section-button-two{
     background-color: #111111;
@@ -37,14 +38,53 @@
     border: 1px solid white;
     margin-top: 30px;
     min-width:160px;
+    display: grid;
+    grid-template-columns: 3.2fr 1fr;
 }
 .footer-button{
-    min-width: 300px;
+    width: 300px;
+    display: grid;
+    justify-content: space-between;
+    padding: 15px;
+    grid-column-gap: 30px;
+    border-radius: 3px;
+    border: none;
+    background: white;
+    font-family: 'Signika', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    grid-template-columns: 3fr 0.1fr;
+
+    
 }
 .footer-button-two{
-    min-width: 300px;
+    width: 300px;
     background-color: #111111;
     color: white;
+    justify-content: space-between;
     border: 1px solid white;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 15px;
+    font-family: 'Signika', sans-serif;
+    display: grid;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 3px;
+    grid-column-gap: 30px;
+    grid-template-columns: 3fr 0.1fr;
+}
+.log{
+    width: 425px;
+    height: 59px;
+    background: #cacaca;
+    color: white;
+    font-size: 17px;
+    border: none;
+    text-align: left;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 7fr 0.7fr;
+    align-items: center;
+    margin-right: 0;
+    border-radius: 3px;
 }

@@ -5,3 +5,9 @@
     padding: 8px 8px 6.4px 16px;
     outline: none;
 }
+.login{
+    width: 400px;
+    height: 39px;
+    margin-bottom: 1rem;
+    border: 1px solid #878787;
+}

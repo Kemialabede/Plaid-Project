@@ -1,0 +1,37 @@
+.login-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.login-form{
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin-left: 30%;
+    padding-top: 50px;
+    font-size: 16px;
+}
+.log-header{
+    margin-bottom: 2.3125rem;
+    font-size: 36px;
+    font-family: 'Vaud',Arial, Helvetica, sans-serif;
+}
+.log-p{
+    margin-bottom: 1rem;
+    color: #4B4B4B;
+}
+.reset{
+    margin-top: 1rem;
+    border-bottom: 1px solid black;
+    width: 120px;
+}
+.reset:hover{
+    color: rgb(90, 70, 247);
+    border-bottom: none;
+}
+.footer-item{
+    padding-top: 90px;
+    margin-left: 15%;
+    cursor: pointer;
+    padding-bottom: 90px;
+}

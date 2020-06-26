@@ -37,6 +37,13 @@ import lend from '../../Components/mainicons/icon-lending-services.png'
 import brokerage from '../../Components/mainicons/icon-banking-and-brokerage.png'
 import investment from '../../Components/mainicons/icon-investments.png'
 import income from '../../Components/mainicons/icon-income.png'
+import whitearrow from '../../Components/mainicons/next.svg'
+import rightarrow from '../../Components/mainicons/right.svg'
+import {motion} from 'framer-motion'
+import screen from '../../Components/mainicons/screen1.png'
+import stroke from '../../Components/mainicons/homepage-howitworks-brushstroke-left.png'
+import twitter from '../../Components/mainicons/twitter .png'
+import instagram from '../../Components/mainicons/instaagram_black.svg'
 
 function MainPage() {
     return (
@@ -49,20 +56,26 @@ function MainPage() {
                     <div className="swerve">
                     <ul className="nav-list">
                         <li className="products">
-                            <span className="options">Products <div className="arrow"><img src={arrow} alt= "arrow"/></div></span>
+                            <div className="options" >Products <div className="arrow"><img className="option-image" src={arrow} alt= "arrow" /></div></div>
                             <div className="products-dropdown">
                                <div className="product-overall">
                                    <div>
                                        <h2 className="product">Products</h2>
                                        <h2 className="product-subtitle">Learn how you can<br />make the most of<br />financial data</h2>
+                                       <div className="list-arrow" >
                                        <p className="product">View global coverage</p>
+                                       <img src = {rightarrow} className="options-image" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "3px", marginLeft: "5px"}}/>
+                                       </div>
                                    </div>
                                    <div className="product-grid">
                                        <div>
                                            <div className="product-flex">
                                                <img src={transaction} alt="transaction" />
                                                <div>
-                                                   <h5 className="product-hover-subcontent">Transactions</h5>
+                                                   <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                       <h5 className="product-hover-subcontent">Transactions</h5>
+                                                        <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                                   </div>
                                                    <p className="transaction-content">Typically 24 months of<br />categorized data</p>
                                                </div>
                                            </div>
@@ -71,7 +84,10 @@ function MainPage() {
                                            <div className="product-flex">
                                                <img src={identity} alt="identity" />
                                                <div>
+                                                   <div className="list-arrow" whileHover = {{color: "blue"}}>
                                                    <h5 className="product-hover-subcontent">Identity</h5>
+                                                   <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                                   </div>
                                                    <p>Bank account-holder<br />information</p>
                                                </div>
                                            </div>
@@ -79,17 +95,21 @@ function MainPage() {
                                        <div>
                                            <div className="product-flex">
                                                <img src={liabilities} alt="liabilities" />
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Liabilities</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                <h5 className="product-hover-subcontent">Liabilities</h5>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}} className="svg"/>
+                                               </div>
                                                    <p>Student loan and credit<br />card details</p>
                                                </div>
                                            </div>
                                        </div>
-                                       <div>
+                                       <div style= {{marginLeft:"-26px"}}>
                                            <div className="product-flex">
                                                <img src={auth} alt="auth" />
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Auth</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                               <h5 className="product-hover-subcontent">Auth</h5>
+                                               <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                               </div>
                                                    <p>Account and routing<br />numbers</p>
                                                </div>
                                            </div>
@@ -97,17 +117,21 @@ function MainPage() {
                                        <div>
                                            <div className="product-flex">
                                                <img src={investment} alt="investment"/>
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Investments</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                               <h5 className="product-hover-subcontent">Investments</h5>
+                                               <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                               </div>
                                                    <p>Retirement, brokerage,<br />health and education</p>
                                                </div>
                                            </div>
                                        </div>
-                                       <div>
+                                       <div style= {{marginLeft:"-29px"}}>
                                            <div className="product-flex">
                                                <img src={income} alt="income" />
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Income</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                               <h5 className="product-hover-subcontent">Income</h5>
+                                               <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                               </div>
                                                    <p>Employer info and<br />depositing data.</p>
                                                </div>
                                            </div>
@@ -115,8 +139,10 @@ function MainPage() {
                                        <div>
                                            <div className="product-flex">
                                                <img src={balance} alt="balance" />
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Balance</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                               <h5 className="product-hover-subcontent">Balance</h5>
+                                               <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                               </div>
                                                    <p>Real-time and historical<br />balances</p>
                                                </div>
                                            </div>
@@ -124,8 +150,10 @@ function MainPage() {
                                        <div>
                                            <div className="product-flex">
                                                <img src={assets} alt="assets" />
-                                               <div>
-                                                   <h5 className="product-hover-subcontent">Assets</h5>
+                                               <div><div className="list-arrow" whileHover = {{color: "blue"}}>
+                                               <h5 className="product-hover-subcontent">Assets</h5>
+                                               <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "19px", marginLeft: "5px"}}/>
+                                               </div>
                                                    <p>Point-time snapshots of<br />user finances</p>
                                                </div>
                                            </div>
@@ -138,7 +166,7 @@ function MainPage() {
                             </div>
                         </li>
                         <li className="use-cases">
-                            <span className="options">Use cases <div className="arrow"><img src={arrow} alt= "arrow"/></div></span>
+                            <div className="options">Use cases <div className="arrow"><img src={arrow} className= "option-image"alt= "arrow"/></div></div>
                             <div className="usecase-dropdown">
                                 <div className="usecase-flex">
                                     <div className="case-content">
@@ -149,23 +177,38 @@ function MainPage() {
                                         <div className="usecase-grid">
                                             <div className="usecontent">
                                                 <img src={personalfinances}  width= "60px" height="60px"/>
-                                                <div><h5 className="case-hover-subcontent">Personal finances</h5></div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                <h5 className="case-hover-subcontent">Personal finances</h5>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "3px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                             <div className="usecontent">
                                                 <img src={consumer} width= "60px" height="60px"/>
-                                                <div><h5 className="case-hover-subcontent">Consumer payments</h5></div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                <h5 className="case-hover-subcontent">Consumer payments</h5>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "3px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                             <div className="usecontent">
                                                 <img src={lend} width= "60px" height="60px"/>
-                                                <div className="case-hover-subcontent"><h5>Lending</h5></div>
+                                                    <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                    <h5 className="case-hover-subcontent">Lending</h5>
+                                                    <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "3px", marginLeft: "5px"}}/>
+                                                    </div>
                                             </div>
                                             <div className="usecontent">
                                                 <img src={brokerage} width= "60px" height="60px"/>
-                                                <div><h5 className="case-hover-subcontent">Banking and brokerage</h5></div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                <h5 className="case-hover-subcontent">Banking and brokerage</h5>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "3px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                             <div className="usecontent">
                                                 <img src={businessfinance} width= "60px" height="60px"/>
-                                                <div><h5 className="case-hover-subcontent"> Business finances</h5></div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
+                                                <h5 className="case-hover-subcontent"> Business finances</h5>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "3px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +216,7 @@ function MainPage() {
                             </div>
                         </li>
                         <li className="docs">
-                            <span className="options">Docs <div className="arrow"><img src={arrow} alt= "arrow"/></div></span>
+                            <div className="options">Docs <div className="arrow"><img src={arrow} className="option-image" alt= "arrow"/></div></div>
                             <div className="docs-dropdown">
                                 <div>
                                     <div className="docs-flex">
@@ -184,13 +227,25 @@ function MainPage() {
                                         <div className="docs-grid">
                                             <div>
                                                 <h5 className="doc-list-head">GET STARTED</h5>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
                                                 <p className="doc-content">Quickstart</p>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "-10px", marginLeft: "5px"}}/>
+                                                </div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
                                                 <p>API documentation</p>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "1px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                             <div>
                                                 <h5 className="doc-list-head">RESOURCES</h5>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
                                                 <p className="doc-content">Libraries</p>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "-10px", marginLeft: "5px"}}/>
+                                                </div>
+                                                <div className="list-arrow" whileHover = {{color: "blue"}}>
                                                 <p>Help center</p>
+                                                <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px",marginTop: "1px", marginLeft: "5px"}}/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -198,7 +253,7 @@ function MainPage() {
                             </div>
                         </li>
                         <li className="pricing"><span className="options">Pricing </span></li>
-                        <li className="aboutus"><span className="options">About us <div className="arrow"><img src={arrow} alt= "arrow"/></div></span>
+                        <li className="aboutus"><div className="options">About us <div className="arrow" ><img src={arrow} className="option-image" alt= "arrow" /></div></div>
                         <div className="aboutus-dropdown">
                             <div>
                                 <div className="aboutus-overall">
@@ -209,17 +264,38 @@ function MainPage() {
                                     <div className="aboutus-grid">
                                         <div>
                                             <h5 className="doc-list-head">WHO WE ARE</h5>
-                                            <p className="doc-content">Company</p>
-                                            <p className="doc-content">Career</p>
-                                            <p className="doc-content">Contacts</p>
+                                            <div className="list-arrow" >
+                                                <p className="doc-content">Company</p>
+                                                <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-9px", marginLeft: "5px"}} />
+                                            </div>
+                                            <div className="list-arrow">
+                                                <p className="doc-content">Career</p>
+                                            <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-9px", marginLeft: "5px"}} />
+                                            </div>
+                                            <div className="list-arrow">
+                                                <p className="doc-content">Contacts</p>
+                                                <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-9px", marginLeft: "5px"}} />
+                                            </div>
+                                            <div className="list-arrow">
                                             <p>Partners</p>
+                                            <img src = {rightarrow}  className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "5px", marginLeft: "5px"}} />
+                                            </div>
                                         </div>
                                         <div>
                                             <div>
                                             <h5 className="doc-list-head"> HOW WE HANDLE DATA</h5>
+                                            <div className="list-arrow" >
                                             <p className="doc-content">Privacy</p>
+                                            <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-9px", marginLeft: "5px"}} />
+                                            </div>
+                                            <div className="list-arrow" >
                                             <p className="doc-content">Security</p>
+                                            <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-9px", marginLeft: "5px"}} />
+                                            </div>
+                                            <div className="list-arrow" >
                                             <p className="doc-content">Legal</p>
+                                            <img src = {rightarrow} className="about-img" alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "-10px", marginLeft: "5px"}} />
+                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -229,10 +305,12 @@ function MainPage() {
                         </li>
                     </ul>
                     </div>
+                    <div className="butn">
                         <div className="log-link">
-                            <a href="">Log in</a>
+                            <a href="/login">Log in</a>
                         </div>
-                        <Button text = "Get API keys" color="nav" />
+                        <Button text = "Get API keys" color="nav" src={rightarrow} className="form-button"/>
+                        </div>
                 </nav>
             </div>
             <section className= "first-grid">
@@ -248,8 +326,8 @@ function MainPage() {
                         <h2 className="homepage-text-connect">to connect their bank <br />accounts to an app</h2>
                     </div>
                     <div className="homepage-form">
-                    <FormInput placeholder="Your Email" type="text"/>
-                    <Button text="Get API Keys" color="section-button"/>
+                    <FormInput placeholder="Your Email" type="text" size="form-input"/>
+                    <Button text="Get API Keys" color="section-button" src={whitearrow}/>
                     </div>
                     <div className="homepage-bottom-text">
                         <p className="bottom-content-one">Start building with Plaid's API for free</p>
@@ -268,7 +346,7 @@ function MainPage() {
                             <img src={image3} alt="homepage-right-image" className="right-image"/>
                         </div>
                         <div className="right-content-text">
-                            <h5 className="text2">WHO WE WORK IT</h5>
+                            <h5 className="text2">WHO WE WORK WITH</h5>
                             <div className="grid-container">
                                 <div>
                                    <img src={venmo} alt="venmo" className="icon"/>
@@ -289,7 +367,7 @@ function MainPage() {
                                     <img src={fanniemae} alt="fannie mae" className="icon-align-fannie"/>
                                 </div>
                             </div>
-                            <span className="icon-bottom-text">Plaid provides developers with the tools they need to create easy and <br /> accessible experiences fo their users, Today, tens of millions of people in <br /> North America (and counting) have succesfully connected their accounts to <br /> apps they love using Plaid.<span><Button text="Our Products" color="section-button-two"/></span> </span>
+                            <span className="icon-bottom-text">Plaid provides developers with the tools they need to create easy and <br /> accessible experiences fo their users, Today, tens of millions of people in <br /> North America (and counting) have succesfully connected their accounts to <br /> apps they love using Plaid.<span><Button text="Our Products" color="section-button-two" src={whitearrow}/></span> </span>
                             <div className="brush-bottom"><img src={image5} alt="homepage-bottom"/></div>
                         </div>
                     </div>
@@ -297,24 +375,24 @@ function MainPage() {
             </section>
             <section className="section-three">
                 <div className="section-three-content-one">
-
                    <h2 className="developer-header">For developers, by developers</h2>
                    <p className="developer-content">With just few lines of code you can implement<br/> Plaid in an afternoon</p>
                    <p className="developer-content">Read our API documentation</p>
                 </div>
-                        <span><img src={image6} alt="howitworks" className="howitworks"/><div className="form">
-                            <div>
+                        <span><img src={image6} alt="howitworks" className="howitworks"/>
+                        <div className="form">
+                            <div className="form-inner-content">
                                 <pre>
                                     <code>
-                                        <span className= "code-text">{"<"}form <span>id</span><span></span>{' "link-form-id" '}<span>method = "GET" {">"}</span><span>{"</form>"}</span><br/>
-                                            <span><span>{"<"}</span>{"script"}</span><br/>
-                                            <span>src</span><span>=</span><span> "https://cdn.plaid.com/link/v2/stable/link-initialize.js"</span><br />
-                                            <span>data-client-name</span><span>=</span><span>"</span><span>Your Company's Name</span><span>"</span><br />
-                                            <span>data-form-id</span><span>=</span><span>"</span><span>link-form-id</span><span>"</span><br />
-                                            <span>data-key</span><span>=</span><span>"</span><span>test_key</span><span>"</span><br />
-                                            <span>data-product</span><span>=</span><span>"</span><span>transactions</span><span>"</span><br />
-                                            <span>data-env</span><span>=</span><span>"</span><span>sandbox</span><span>"</span><span>{">"}</span><br />
-                                            <span>{"</"}</span><span>script</span><span>{">"}</span>
+    <span className= "code-text"><span style = {{color: "#878787"}}>{"<"}</span><span style = {{color: "#ABFFDB"}}>form</span><span style = {{color: "#63DAFF"}}> id</span><span></span> "link-form-id"<span style = {{color: "#63DAFF"}}> method</span> <span style = {{color: "#878787"}}>=</span><span>"GET"</span><span style= {{color: "#878787"}}>{">"}</span><span style= {{color: "#878787"}}>{"<"}</span><span style= {{color: "#878787"}}>{"/"}</span><span style = {{color: "#ABFFDB"}}>form</span><span style= {{color: "#878787"}}>{">"}</span><br className="btm"/>
+                                            <span className= "code-text"><span style = {{color: "#878787"}}>{"<"}</span><span style = {{color: "#ABFFDB"}}>{"script"}</span></span><br/>
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>src</span><span style = {{color: "#878787"}}>= </span><span> "https://cdn.plaid.com/link/v2/stable/link-initialize.js"</span><br />
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>data-client-name</span><span style = {{color: "#878787"}}>= </span><span style = {{color: "#878787"}}>"</span><span>Your Company's Name</span><span style = {{color: "#878787"}}>"</span><br />
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>data-form-id</span><span style = {{color: "#878787"}}>= </span><span style = {{color: "#878787"}}>"</span><span>link-form-id</span><span style = {{color: "#878787"}}>"</span><br />
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>data-key</span><span style = {{color: "#878787"}}>= </span><span style = {{color: "#878787"}}>"</span><span>test_key</span><span style = {{color: "#878787"}}>"</span><br />
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>data-product</span><span style = {{color: "#878787"}}>= </span><span style = {{color: "#878787"}}>"</span><span>transactions</span><span style = {{color: "#878787"}}>"</span><br />
+                                            <span className= "code-text" style = {{color: "#63DAFF"}}>data-env</span><span style = {{color: "#878787"}}>= </span><span style = {{color: "#878787"}}>"</span><span>sandbox</span><span style = {{color: "#878787"}}>"</span><span style = {{color: "#878787"}}>{">"}</span><br />
+                                            <span style = {{color: "#878787"}}>{"</"}</span><span style = {{color: "#63DAFF"}}>script</span><span style = {{color: "#878787"}}>{">"}</span>
                                         </span>
                                     </code>
                                 </pre>
@@ -322,9 +400,15 @@ function MainPage() {
                         </div></span>
             </section>
             <section className="section-four">
-                <div>
-                <ReactPlayer url ={video2} playing= {true}  loop= {true} width="500px" height= "500px" className="mobile-video" />
+                <span>
+                <img src={stroke} width="100%" height="100%"/>
+                <div className="video-mobile">
+                <img src ={screen} style ={{position: "absolute"}}/>
                 </div>
+                <div className="second-video-mobile">
+                <ReactPlayer url ={video2} playing= {true}  loop= {true} width="260px" height= "505px" className="mobile-video" style ={{position: "relative", left: "-6%", marginTop: "8%", marginLeft: "89px"}}/>
+                </div>
+                </span>
                 <div className="user-exp">
                     <h2 className="user">Simple, beautiful user experience</h2>
                     <p className="user-experience">Our frontend module is easy to drop in whatever<br />your'e building and designed to optimise<br/> conversation</p>
@@ -339,65 +423,73 @@ function MainPage() {
                         <div>
                             <img src={personalfinances}  width="122px" height="122px" />
                         </div>
-                        <div>
-                            <h4>Personal finances</h4>
-                            <p>Help users manage, budget, and<br /> make sense of their money</p>
+                        <div className="next-section-inner-text">
+                            <h4 className="grid-inner-cont">Personal finances</h4>
+                            <p className="inner-cont">Help users manage, budget, and<br /> make sense of their money</p>
+                            <div className="list-arrow" whileHover = {{color: "blue"}}>
                             <p>Learn more</p>
+                            <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "2.5px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                            </div>
                         </div>
                     </div>
                     <div className="grid-pictures">
                         <div>
                             <img src={consumerpayment} width="122px" height="122px"/>
                         </div>
-                        <div>
-                            <h4>Consumer Payment</h4>
-                            <p>Help users send money and pay  bills</p>
+                        <div className="next-section-inner-text">
+                            <h4 className="grid-inner-cont">Consumer Payment</h4>
+                            <p className="inner-cont">Help users send money and pay  bills</p>
+                            <div className="list-arrow" whileHover = {{color: "blue"}}>
                             <p>Learn more</p>
+                            <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "2.5px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                            </div>
                         </div>
                     </div>
                     </div>
                     <div className="grid">
                     <div className="grid-pictures">
                         <div>
-                            <img src={personalfinances}  width="122px" height="122px" />
+                            <img src={lending}  width="122px" height="122px" />
                         </div>
-                        <div>
-                            <h4>Personal finances</h4>
-                            <p>Help users manage, budget, and<br /> make sense of their money</p>
+                        <div className="next-section-inner-text">
+                            <h4 className="grid-inner-cont">Lending</h4>
+                            <p className="inner-cont">Help consumers and businesses<br /> access capital through a streamlined<br />experience</p>
+                            <div className="list-arrow" whileHover = {{color: "blue"}}>
                             <p>Learn more</p>
+                            <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "2.5px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                            </div>
                         </div>
                     </div>
                     <div className="grid-pictures">
                         <div>
-                            <img src={consumerpayment} width="122px" height="122px"/>
+                            <img src={banking} width="122px" height="122px"/>
                         </div>
-                        <div>
-                            <h4>Consumer Payment</h4>
-                            <p>Help users send money and pay  bills</p>
+                        <div className="next-section-inner-text">
+                            <h4 className="grid-inner-cont">Banking and brokerage</h4>
+                            <p className="inner-cont">Help users manage their savings, <br />equity, investments, and more</p>
+                            <div className="list-arrow" whileHover = {{color: "blue"}}>
                             <p>Learn more</p>
+                            <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "2.5px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                            </div>
                         </div>
                     </div>
                     </div>
                     <div className="grid">
                     <div className="grid-pictures">
                         <div>
-                            <img src={personalfinances}  width="122px" height="122px" />
+                            <img src={finance}  width="122px" height="122px" />
                         </div>
-                        <div>
-                            <h4>Personal finances</h4>
-                            <p>Help users manage, budget, and<br /> make sense of their money</p>
+                        <div className="next-section-inner-text">
+                            <h4 className="grid-inner-cont">Business finances</h4>
+                            <p className="inner-cont">Help businesses manage their<br /> expenses, paybills, do bookkeeping<br/>and send payroll</p>
+                            <div className="list-arrow" whileHover = {{color: "blue"}}>
                             <p>Learn more</p>
+                            <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "2.5px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                            </div>
                         </div>
                     </div>
                     <div className="grid-pictures">
-                        <div>
-                            <img src={consumerpayment} width="122px" height="122px"/>
-                        </div>
-                        <div>
-                            <h4>Consumer Payment</h4>
-                            <p>Help users send money and pay  bills</p>
-                            <p>Learn more</p>
-                        </div>
+                            <h2 className="create">What will you create?</h2>
                     </div>
                     </div>
             </section>
@@ -409,8 +501,11 @@ function MainPage() {
                 <div className="privacy-two">
                     <h5 className="text2">privacy and security</h5>
                     <h2 className="privacy-header">Our commitment to<br/>consumers</h2>
-                    <p className="privacy-content">We believe everyone has the fundamental right to<br />access the best financial technology that<br />enables them to live a healthy financial life.</p>
+                    <p className="privacy">We believe everyone has the fundamental right to<br />access the best financial technology that<br />enables them to live a healthy financial life.</p>
+                    <div className="list-arrow" whileHover = {{color: "blue"}}>
                     <p>Learn more</p>
+                    <img src = {rightarrow} alt="rightarrow" style = {{width: "12px", height: "10px", marginTop: "4px", marginLeft: "5px"}} whileHover={{rotateX: 80, rotateY: 80, x:7, y:0}}/>
+                    </div>
                 </div>
                 </div>
             </section>
@@ -419,8 +514,8 @@ function MainPage() {
                 <div className="footer-flex">
                     <h2 className="footer-header">Ready to get<br/>started?</h2>
                     <div className="button-flex">
-                        <Button text="Get API keys" color="footer-button"/>
-                        <Button text="Contact sales" color="footer-button-two"/>
+                        <Button text="Get API keys" color="footer-button" src={rightarrow}/>
+                        <Button text="Contact sales" color="footer-button-two" src={whitearrow}/>
                     </div>
                 </div>
                 <div className="grid-footer">
@@ -476,6 +571,18 @@ function MainPage() {
                         <p className="footer-p">Plaid exchange</p>
                     </div>
                 </div>
+                <div className="signed">
+                <div footer-icons>
+                    <img src={twitter} width="40px"/>
+                    <img src={instagram} width="40px"/>
+                </div>
+                <div>
+                    <span className="plaidinc">
+                        <br />
+                        @ 2020 Plaid Inc
+                    </span>
+                </div>
+                </div>
             </div>
             </footer>
         </div>
@@ -483,3 +590,4 @@ function MainPage() {
 }
 
 export default MainPage;
+
